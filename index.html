@@ -19,6 +19,7 @@
         }
         .blue{background: rgb(134, 182, 190);}
            .orange{background: orange;}
+           .red{background-color: rgb(239, 103, 103)}
     </style>
 </head>
 <body>
@@ -77,7 +78,8 @@ for(let i=1;i<=5;i++){
     for(let i=1;i<=5;i++){
          kod4+='<tr>'
     for(let j=1;j<=5;j++){
-       x= eded%3==0 ? 'orange ': ' '
+       x= eded%3==0 ? 'orange ':
+        eded%2==1 ? 'red' : ' '
         kod4+=`<td class=${x}>${eded}</td>`
             eded++
     }
