@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border-collapse: collapse;}
+        td{
+            width:100px;
+            height:60px;
+            border:1px solid #333;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:20px;
+        }
+        .blue{background: rgb(134, 182, 190);}
+           .orange{background: orange;}
+    </style>
+</head>
+<body>
+    <div class="container">
+            <table id="cdv"></table>
+    <table id="cdv2"></table>
+    <table id="cdv3"></table>
+    <table id="cdv4"></table>
+    </div>
+<script>
+    let  cdv=document.getElementById('cdv')
+        let  cdv2=document.getElementById('cdv2')
+        let cdv3=document.getElementById('cdv3')
+                let cdv4=document.getElementById('cdv4')
+    let kod=' '
+    let kod2=' '
+        let kod3=''
+             let kod4=''
+        let x
+           x=1
+    for(let i=1;i<=6;i++){
+        kod+='<tr>'
+        for(let j=1;j<=6;j++){
+           let reng=(i%2==0) ? 'blue' : ' ' 
+           
+kod+=`<td class=${reng}>${x++}</td>`
+        }
+    
+        kod+='</tr>'
+    }
+    cdv.innerHTML=kod
+    //2ci table
+  x=1
+     for(let i=1;i<=7;i++){
+        kod2+='<tr>'
+        for(let j=1;j<=7;j++){
+           let reng=(i==j || i+j==8) ? 'blue' :' '
+           kod2+=`<td class=${reng}>${x++}</td>`
+        }
+        kod2+='</tr>'
+    }
+    cdv2.innerHTML=kod2  
+for(let i=1;i<=5;i++){
+    x=0.1
+         kod3+='<tr>'
+    for(let j=1;j<=5;j++){
+        kod3+=`<td>${i+x}</td>`
+    }
+      kod3+='</tr>'
+}
+    cdv3.innerHTML=kod3
+    //4cu cedvel
+    
+  
+    eded=1
+    for(let i=1;i<=5;i++){
+         kod4+='<tr>'
+    for(let j=1;j<=5;j++){
+       x= eded%2==1 ? 'orange ': ' '
+        kod4+=`<td class=${x}>${eded}</td>`
+            eded++
+    }
+
+      kod4+='</tr>'
+}
+    cdv4.innerHTML=kod4
+</script>
+</body>
+</html>
